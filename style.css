@@ -1,0 +1,311 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+:root {
+    --primary-color: #ff69b4; /* Hồng cute */
+    --secondary-color: #6a5acd; /* Tím nhẹ */
+    --accent-color: #ffc0cb; /* Hồng nhạt */
+    --text-color: #333;
+    --bg-color: #fff0f5; /* Nền trắng hồng nhẹ nhàng */
+    --card-bg: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- HEADER MỚI --- */
+.header {
+    background-color: white;
+    padding: 40px;
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    margin: 10px auto;
+    max-width: 1600px;
+}
+
+.header-top {
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 2px solid var(--primary-color);
+    gap: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.cskh {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+.phone-number {
+    font-size: 1.5rem;
+    font-family: 'Pacifico', cursive;
+    position: relative;
+    padding-left: 40px;
+}
+
+.phone-number::before {
+    content: '';
+    background-image: url('https://i.ibb.co/3sS7L7h/headphone-icon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.follow-button {
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    padding: 140px 160px;
+    border: 2px solid var(--primary-color);
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+}
+
+.shop-name {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.social-item {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 2px solid var(--primary-color);
+    transition: transform 0.2s ease;
+}
+
+.social-item:hover {
+    transform: translateY(-3px);
+}
+
+.social-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+.zalo img {
+    width: 80%;
+}
+
+.footer-header {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+
+/* Các đoạn CSS cho menu cũ vẫn giữ nguyên để đảm bảo toàn bộ trang web hiển thị đúng */
+.main-content {
+    padding: 2rem;
+    flex: 1;
+}
+
+.menu-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px var(--shadow-color);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-card h2 {
+    font-family: 'Pacifico', cursive;
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.menu-list li {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 0.75rem 1.25rem;
+    border-radius: 15px;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.menu-list li:last-child {
+    margin-bottom: 0;
+}
+
+.menu-list li:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.menu-list li i {
+    color: var(--secondary-color);
+}
+
+.special-note {
+    background-color: #fff0f5;
+    border-left: 5px solid var(--primary-color);
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    font-style: italic;
+    color: #666;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+/* Khung và căn giữa banner khai trương */
+.countdown-banner {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Pacifico', cursive;
+}
+
+.countdown-banner h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.countdown-banner p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#countdown {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
